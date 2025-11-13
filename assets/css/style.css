@@ -15,17 +15,35 @@
   --grad-hero: linear-gradient(135deg,#e9f5ff,#eef7f1);
 }
 
+.dark-theme .home-hero { background: linear-gradient(135deg,#141d22,#1e2a30); }
+.dark-theme .home-hero:before { background: radial-gradient(circle at 80% 20%, rgba(135,197,232,.18), transparent 70%), radial-gradient(circle at 15% 85%, rgba(91,127,54,.18), transparent 65%); opacity:.55; }
 .dark-theme {
+  /* Refined dark mode: textual contrast without altering images */
   --color-bg: #101418;
   --color-surface: #182126;
-  --color-primary: #8fc7ec;
-  --color-secondary: #9bc665;
-  --color-accent: #4d9ecc;
-  --color-text: #e7eef3;
-  --color-muted: #9aa8b2;
-  --color-quote-bg: #20323b;
+  --color-primary: #2d6a8e;
+  --color-secondary: #5b7f36;
+  --color-accent: #87c5e8;
+  --color-text: #e3e9ee; /* lighter for readability */
+  --color-muted: #a4b1ba; /* softened contrast for secondary text */
+  --color-quote-bg: #1a2830;
   --shadow: 0 4px 18px rgba(0,0,0,0.5);
 }
+/* Dark mode textual refinements */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4 { color: var(--color-text); text-shadow: 0 1px 2px rgba(0,0,0,.4); }
+.dark-theme .tagline { color: var(--color-accent); }
+.dark-theme a { color: var(--color-accent); }
+.dark-theme a:hover,
+.dark-theme a:focus { color: #b9e5ff; }
+.dark-theme .quote-box,
+.dark-theme .quote-inline { background: var(--color-quote-bg); border-left-color: var(--color-secondary); }
+.dark-theme .quote-box::before,
+.dark-theme .quote-inline::before { opacity:.25; }
+.dark-theme .panel { background: #1a2329; }
+.dark-theme .panel p { color: var(--color-muted); }
 
 /* Global Reset */
 * { box-sizing: border-box; }
@@ -128,6 +146,23 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.15; }
 .card { background: var(--color-bg); padding: 1.1rem 1rem 1.25rem; border-radius: var(--radius-md); box-shadow: var(--shadow); position: relative; }
 .card:after { content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.05); }
 .card h3 { margin-top: 0; font-size: 1.1rem; }
+/* Global leaders uniform sizing */
+.leader-cards { align-items: stretch; }
+.leader-cards .card { display: flex; flex-direction: column; justify-content: flex-start; }
+.leader-cards .leader-thumb { width: 160px; height: 160px; object-fit: contain; margin: 0 auto .6rem; display: block; }
+.leader-cards .card p { margin: 0 0 .55rem; font-size: .9rem; }
+.leader-cards .card p:last-of-type { margin-bottom: 0; }
+.dark-theme .leader-cards .card { background: #1a2329; }
+
+/* Issue (Violence / Terrorism) equal height cards */
+.issue-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); align-items: stretch; margin-top: 1.5rem; }
+.issue-card { background: var(--color-surface); padding: 1.15rem 1rem 1.35rem; border-radius: var(--radius-md); box-shadow: var(--shadow); display: flex; flex-direction: column; position: relative; }
+.issue-card:before { content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none; box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }
+.issue-card h3 { margin: .6rem 0 .55rem; font-size: 1.15rem; }
+.issue-card p { margin: 0 0 .65rem; font-size: .95rem; color: var(--color-text); }
+.issue-card p:last-of-type { margin-bottom: 0; }
+.issue-icon { width: 140px; height: 140px; object-fit: contain; margin: 0 auto .25rem; display: block; }
+.dark-theme .issue-card { background: #1a2329; }
 
 /* Quiz */
 #peaceQuiz fieldset { border: 1px solid rgba(0,0,0,.15); padding: .75rem 1rem 1rem; margin-bottom: 1.25rem; border-radius: var(--radius-sm); }
@@ -219,5 +254,4 @@ h2 { letter-spacing: .5px; }
 
 .main-nav a.active { background: var(--color-primary); color:#fff; box-shadow: var(--shadow); }
 
-/* Dark mode image refinement */
-.dark-theme .invert-on-dark { filter: invert(1) hue-rotate(180deg) brightness(1.05) contrast(0.95); }
+/* Removed dark mode image inversion refinements */
