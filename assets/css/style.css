@@ -157,10 +157,14 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.15; }
 /* Global leaders uniform sizing */
 .leader-cards { align-items: stretch; }
 .leader-cards .card { display: flex; flex-direction: column; justify-content: flex-start; }
-.leader-cards .leader-thumb { width: 160px; height: 160px; object-fit: contain; margin: 0 auto .6rem; display: block; }
+.leader-cards .leader-thumb { width: 220px; height: 220px; object-fit: contain; margin: 0 auto .75rem; display: block; }
 .leader-cards .card p { margin: 0 0 .55rem; font-size: .9rem; }
 .leader-cards .card p:last-of-type { margin-bottom: 0; }
 .dark-theme .leader-cards .card { background: #1a2329; }
+
+@media (max-width: 640px) {
+  .leader-cards .leader-thumb { width: 150px; height: 150px; }
+}
 
 /* Issue (Violence / Terrorism) equal height cards */
 .issue-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); align-items: stretch; margin-top: 1.5rem; }
@@ -169,7 +173,10 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.15; }
 .issue-card h3 { margin: .6rem 0 .55rem; font-size: 1.15rem; }
 .issue-card p { margin: 0 0 .65rem; font-size: .95rem; color: var(--color-text); }
 .issue-card p:last-of-type { margin-bottom: 0; }
-.issue-icon { width: 140px; height: 140px; object-fit: contain; margin: 0 auto .25rem; display: block; }
+.issue-icon { width: 200px; height: 200px; object-fit: contain; margin: 0 auto .6rem; display: block; }
+@media (max-width: 640px) {
+  .issue-icon { width: 130px; height: 130px; margin-bottom: .4rem; }
+}
 .dark-theme .issue-card { background: #1a2329; }
 
 /* Quiz */
