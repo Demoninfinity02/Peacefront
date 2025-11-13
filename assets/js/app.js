@@ -1,4 +1,4 @@
-/* Interactive functionality for Ethics of Peace site */
+/* Interactive functionality for PeaceFront site */
 (function() {
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
