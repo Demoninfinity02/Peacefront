@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peacebuilder Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Lato:300;400;500;700&family=Merriweather:300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-quiz">
+  <header class="site-header" role="banner">
+    <div class="logo-area"><span class="logo-icon">🕊️</span><h1 class="site-title">Ethics of Peace</h1></div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰<span class="sr-only">Menu</span></button>
+    <nav id="primary-nav" class="main-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="understanding.html">Violence & Terrorism</a></li>
+        <li><a href="nonviolence.html">Non-Violence</a></li>
+        <li><a href="gandhi.html">Gandhi</a></li>
+        <li><a href="global.html">Global Leaders</a></li>
+        <li><a href="why.html">Why Choose Peace</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="action.html">Take Action</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+        <li><button id="themeToggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="sub-hero" aria-labelledby="quiz-heading">
+    <h2 id="quiz-heading">What Kind of Peacebuilder Are You?</h2>
+    <p class="page-lead">Answer 5 quick questions to reveal your peace style.</p>
+  </section>
+  <main class="content-section alt">
+    <form id="peaceQuiz" novalidate>
+      <fieldset>
+        <legend>1. When you see a conflict, your first instinct is to:</legend>
+        <label><input type="radio" name="q1" value="A" required> A. Calm everyone and listen.</label>
+        <label><input type="radio" name="q1" value="B"> B. Lead a fair solution.</label>
+        <label><input type="radio" name="q1" value="C"> C. Offer kindness or humor.</label>
+        <label><input type="radio" name="q1" value="D"> D. Reflect quietly first.</label>
+      </fieldset>
+      <fieldset>
+        <legend>2. Your biggest strength is:</legend>
+        <label><input type="radio" name="q2" value="A" required> A. Empathy.</label>
+        <label><input type="radio" name="q2" value="B"> B. Courage.</label>
+        <label><input type="radio" name="q2" value="C"> C. Creativity.</label>
+        <label><input type="radio" name="q2" value="D"> D. Wisdom.</label>
+      </fieldset>
+      <fieldset>
+        <legend>3. What inspires you most?</legend>
+        <label><input type="radio" name="q3" value="A" required> A. Stories of forgiveness.</label>
+        <label><input type="radio" name="q3" value="B"> B. Brave defenders of justice.</label>
+        <label><input type="radio" name="q3" value="C"> C. Art or writing that unites.</label>
+        <label><input type="radio" name="q3" value="D"> D. Philosophers and spiritual teachers.</label>
+      </fieldset>
+      <fieldset>
+        <legend>4. When someone hurts you, you usually:</legend>
+        <label><input type="radio" name="q4" value="A" required> A. Try to forgive.</label>
+        <label><input type="radio" name="q4" value="B"> B. Confront peacefully.</label>
+        <label><input type="radio" name="q4" value="C"> C. Turn pain into creativity.</label>
+        <label><input type="radio" name="q4" value="D"> D. Stay calm and learn.</label>
+      </fieldset>
+      <fieldset>
+        <legend>5. If you could join one movement, it would be:</legend>
+        <label><input type="radio" name="q5" value="A" required> A. Humanitarian aid.</label>
+        <label><input type="radio" name="q5" value="B"> B. Social justice campaigns.</label>
+        <label><input type="radio" name="q5" value="C"> C. Creative peace education.</label>
+        <label><input type="radio" name="q5" value="D"> D. Meditation or dialogue groups.</label>
+      </fieldset>
+      <button type="submit" class="btn primary">Get Result</button>
+    </form>
+    <div id="quizResult" class="quiz-result" aria-live="polite"></div>
+    <div class="result-types" aria-hidden="true">
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Description</th><th>Traits</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🌸 The Empathic Healer</td><td>You build peace through compassion and understanding. You heal wounds of hate with kindness.</td><td>Empathy, forgiveness, patience</td></tr>
+          <tr><td>🦁 The Courageous Activist</td><td>You lead with conviction and speak truth to power. You believe peace needs brave voices.</td><td>Justice, leadership, bravery</td></tr>
+          <tr><td>🎨 The Creative Unifier</td><td>You use art, education, or expression to unite others and spread hope.</td><td>Creativity, joy, collaboration</td></tr>
+          <tr><td>🕯️ The Mindful Mediator</td><td>You bring calm and wisdom into conflict. You help others find balance and perspective.</td><td>Reflection, self-control, peace</td></tr>
+        </tbody>
+      </table>
+      <p class="end-message">No matter what kind of peacebuilder you are, remember: every act of kindness is a step toward a more ethical world.</p>
+    </div>
+  </main>
+  <section class="content-section page-bottom" aria-labelledby="quiz-more-heading">
+    <h3 id="quiz-more-heading">After Your Result</h3>
+    <ul class="benefits">
+      <li>Write one sentence about how you’ll use your strengths for peace.</li>
+      <li>Pair up with someone with a different style and plan a joint action.</li>
+      <li>Re‑take the quiz in a month and reflect on any changes.</li>
+    </ul>
+  </section>
+  <footer class="site-footer" role="contentinfo"><p>&copy; 2025 Ethics of Peace.</p></footer>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
